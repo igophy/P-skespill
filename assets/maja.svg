@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 480" role="img" aria-labelledby="title desc">
+  <title id="title">Maja Solheim</title><desc id="desc">Illustrert portrett av Maja med mørk bobfrisyre og resepsjonistuniform.</desc>
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#466c66"/><stop offset=".5" stop-color="#25433c"/><stop offset="1" stop-color="#0b221e"/></linearGradient>
+    <radialGradient id="light"><stop stop-color="#d8bd8a" stop-opacity=".2"/><stop offset="1" stop-color="#d8bd8a" stop-opacity="0"/></radialGradient>
+    <linearGradient id="skin" x2="1" y2=".3"><stop stop-color="#b88667"/><stop offset=".4" stop-color="#deb592"/><stop offset=".7" stop-color="#d4a380"/><stop offset="1" stop-color="#ab7b5e"/></linearGradient>
+    <linearGradient id="hair" x2="1" y2="1"><stop stop-color="#42392d"/><stop offset=".5" stop-color="#262921"/><stop offset="1" stop-color="#14201c"/></linearGradient>
+    <linearGradient id="coat" x2="1" y2="1"><stop stop-color="#466b60"/><stop offset=".5" stop-color="#284d42"/><stop offset="1" stop-color="#17352b"/></linearGradient>
+    <linearGradient id="shirt" x2="1" y2="1"><stop stop-color="#ddd3b8"/><stop offset="1" stop-color="#869786"/></linearGradient>
+    <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency=".75" numOctaves="3" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncA type="linear" slope=".065"/></feComponentTransfer><feBlend in="SourceGraphic" mode="soft-light"/></filter>
+  </defs>
+  <g filter="url(#grain)">
+  <path fill="url(#bg)" d="M0 0h400v480H0z"/><ellipse cx="108" cy="85" rx="233" ry="230" fill="url(#light)"/>
+  <path d="M33 0v480M43 0v480M338 0v480M348 0v480" stroke="#a4b49a" stroke-width="2" opacity=".13"/>
+  <path d="M1 69h73v202H1M320 67h80v207h-80" fill="#c7b27d" opacity=".04"/>
+  <circle cx="319" cy="119" r="4" fill="#dec594" opacity=".45"/>
+  <path d="M126 306C73 318 37 365 20 480H381C374 390 337 326 279 308L242 285H159z" fill="url(#coat)"/>
+  <path d="M160 267L157 315Q172 351 201 357Q231 350 248 314L240 263" fill="url(#skin)"/>
+  <path d="M157 307L141 319L166 480H239L260 321L242 307L201 344z" fill="url(#shirt)"/>
+  <path d="M157 307L199 344L180 373L141 327zM242 307L201 344L219 373L261 327z" fill="#d5cdb4"/>
+  <path d="M129 313L96 354L123 382L102 403L165 480H191L174 375z" fill="#4b6c5d"/>
+  <path d="M269 313L304 355L275 383L297 404L237 480H213L225 375z" fill="#234539"/>
+  <path d="M197 362L198 480" stroke="#708576" stroke-width="1.5"/><circle cx="198" cy="394" r="3" fill="#c7bc9b"/><circle cx="198" cy="430" r="3" fill="#c7bc9b"/>
+  <path d="M104 178C95 109 130 66 170 57C200 42 252 54 276 84C301 113 300 163 289 211L280 285Q258 307 236 300L141 304Q100 284 103 247z" fill="url(#hair)"/>
+  <path d="M125 178C113 169 105 185 116 208L131 224M269 177C281 167 288 183 279 207L264 225" fill="#b9896a"/>
+  <path d="M128 126C143 99 176 87 204 91C238 94 264 116 272 150L267 218C260 255 238 283 204 291C173 286 147 262 137 232z" fill="url(#skin)"/>
+  <path d="M120 155Q133 133 159 123C196 113 221 95 225 74Q158 53 126 98Q107 123 110 164L122 182z" fill="url(#hair)"/>
+  <path d="M221 78Q239 127 274 156L275 230L291 177Q301 119 270 90z" fill="url(#hair)"/>
+  <path d="M118 145Q145 107 188 97M123 154Q153 122 181 119M232 91Q248 124 277 146" fill="none" stroke="#978869" opacity=".35" stroke-width="2"/>
+  <path d="M143 180Q158 171 178 177M217 176Q236 166 252 178" fill="none" stroke="#413b2c" stroke-width="4" stroke-linecap="round"/>
+  <path d="M143 191Q160 180 179 191Q161 201 143 191M216 190Q233 179 252 190Q235 200 216 190" fill="#e2cfaa"/>
+  <ellipse cx="163" cy="190" rx="6" ry="7" fill="#6b654b"/><ellipse cx="234" cy="189" rx="6" ry="7" fill="#6b654b"/>
+  <ellipse cx="163" cy="190" rx="3" ry="4.5" fill="#202c22"/><ellipse cx="234" cy="189" rx="3" ry="4.5" fill="#202c22"/>
+  <circle cx="161" cy="187" r="1.7" fill="#f6ecd3"/><circle cx="232" cy="186" r="1.7" fill="#f6ecd3"/>
+  <path d="M142 191Q160 180 179 191M216 190Q234 179 252 190" fill="none" stroke="#514130" stroke-width="2.2"/>
+  <path d="M142 191L138 187M252 190L256 186" fill="none" stroke="#514130" stroke-width="1.6"/>
+  <path d="M199 185C198 197 192 215 193 220Q201 227 211 219" fill="none" stroke="#b38361" stroke-width="1.8" stroke-linecap="round"/>
+  <path d="M193 220Q197 216 202 220M207 220Q212 215 215 218" fill="none" stroke="#94694d" stroke-width="1.3"/>
+  <path d="M180 244Q191 238 202 241Q213 238 224 244Q210 258 196 255Q186 253 180 244z" fill="#ac6e5c"/>
+  <path d="M181 244Q203 249 224 244" fill="none" stroke="#754b3e" stroke-width="1.4"/>
+  <path d="M190 251Q205 257 217 249" fill="none" stroke="#dda889" stroke-width="1.2"/>
+  <ellipse cx="155" cy="220" rx="15" ry="7" fill="#bd8269" opacity=".28"/><ellipse cx="242" cy="218" rx="14" ry="7" fill="#bd8269" opacity=".28"/>
+  <path d="M173 269Q199 282 225 268" fill="none" stroke="#b88d70" opacity=".4" stroke-width="1.5"/>
+  <path d="M128 157C118 187 122 233 137 271L149 295Q130 304 109 283C98 251 98 205 112 165z" fill="url(#hair)"/>
+  <path d="M275 151C284 186 280 236 264 271L253 295Q273 305 286 282C297 248 301 197 287 163z" fill="url(#hair)"/>
+  <path d="M111 192Q102 245 122 282M280 183Q295 234 276 282" fill="none" stroke="#6f7056" opacity=".3" stroke-width="2"/>
+  <circle cx="133" cy="224" r="4" fill="#c5b17a"/><circle cx="264" cy="220" r="4" fill="#c5b17a"/>
+  <path d="M155 310Q200 365 244 310" fill="none" stroke="#bfab78" stroke-width="1.5"/><circle cx="201" cy="347" r="4" fill="#cbb780"/>
+  <rect x="266" y="383" width="47" height="16" rx="3" fill="#bcab7b"/><path d="M274 388h18M274 393h25" stroke="#455440" stroke-width="1.4" opacity=".75"/>
+  <path d="M76 384L58 480M326 384L346 480" fill="none" stroke="#9ba68b" opacity=".18" stroke-width="2"/>
+  </g>
+</svg>
