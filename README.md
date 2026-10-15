@@ -8,14 +8,14 @@ Spillet tar cirka 15–25 minutter, alene eller som et lag. Inneholder et fiktiv
 
 ## Spillet
 
-- Egen saksstart og en kort introduksjon til oppdraget.
+- Kompakt saksstart og en tydelig knapp som fører direkte til neste rom eller person.
 - Tre illustrerte rom med trykkbare spor og animert undersøkelse.
-- Fire mistenkte med samtalebobler og spørsmål som valgknapper. Nye bevis åpner en ekstra konfrontasjon.
-- En bevistavle der to spor kobles sammen til en konklusjon.
+- Fire mistenkte med samtalebobler og neste spørsmål fast nederst. Andre spørsmål velges fra en egen liste. Nye bevis åpner en ekstra konfrontasjon.
+- Bevis åpnes direkte ved trykk. Kobling av to spor skjer i en egen visning med tydelig valgstatus.
 - Tidslinje, avhørsnotater og egne notater.
 - Anklage i fire steg: person, metode, motiv og gjennomgang.
 - Tre hint, poeng ved løsning og en epilog.
-- Fast bunnmeny, sideoverganger, animasjoner, valgfri stemningslyd og originale illustrasjoner.
+- Fast bunnmeny med direkte tilgang til rom, avhør, bevis og løsning. Viktige knapper er synlige mens lengre tekst skrolles for seg.
 
 Fremdriften lagres lokalt i nettleseren. Lagrede spill fra den første versjonen videreføres. Det finnes ett fast mysterium: «Start på nytt» tømmer notatene og funnene, men endrer ikke løsningen.
 
@@ -26,7 +26,7 @@ Fremdriften lagres lokalt i nettleseren. Lagrede spill fra den første versjonen
 - **iPhone/iPad:** Åpne i Safari, trykk Del og velg **Legg til på Hjem-skjerm**.
 - **Android:** Velg **Installer app** eller **Legg til på startsiden** i Chrome-menyen.
 
-Dette er en installerbar nettapp (PWA). Den åpnes uten nettleserens vanlige navigasjon etter installasjon. Etter første vellykkede nettbesøk er spillet tilgjengelig uten nett i nettlesere som støtter service workers. Første nedlasting og appinstallasjon trenger nett. Lukk gamle spillfaner og åpne appen igjen etter en ny versjon for å aktivere oppdateringen.
+Dette er en installerbar nettapp (PWA). Den åpnes uten nettleserens vanlige navigasjon etter installasjon. Etter første vellykkede nettbesøk er spillet tilgjengelig uten nett i nettlesere som støtter service workers. Første nedlasting og appinstallasjon trenger nett. Ved en oppdatering lastes spillet inn på nytt når den nye versjonen er klar. Lagrede spor, svar og notater tas med videre så lenge saken har samme innholdsrevisjon.
 
 ## Kjør lokalt
 
@@ -52,8 +52,22 @@ Samspillet mellom rom, bevis og avhør er inspirert av etablerte mobilspill:
 
 Historien, grafikken og grensesnittet i Fjellro er originale. Det brukes ingen innholdsfiler fra disse spillene.
 
+## Endre historie, personer og løsning senere
+
+Alt saksinnhold er samlet i [game-data.js](game-data.js): historien, karakterene, hvilke personer som er mistenkte, avhør, spor, hint, konfrontasjon, løsning og oppklaring. Spillmotoren bruker konfigurasjonen uten egne regler for bestemte personnavn eller en bestemt gjerningsperson.
+
+Se [CONTENT.md](CONTENT.md) for en norsk redigeringsveiledning. Antall personer, mistenkte, spørsmål, spor og forbindelser beregnes fra dataene. En person kan være et vitne som avhøres uten å være et mulig valg i anklagen (`suspect: false`). Endringer som gjør tidligere funn ugyldige får en ny `meta.revision`.
+
+Kontroller innholdet fra repoets rot:
+
+```sh
+node prepare-release.mjs
+```
+
+Kommandoen validerer referanser, romplasseringer, alternativer i løsningen og illustrasjoner, og oppdaterer offline-versjonen automatisk. Publiser den oppdaterte `sw.js` sammen med innholdet, slik at eksisterende installasjoner mottar endringene. Historielogikken må også gjennomspilles.
+
 ## Teknisk og kontroll
 
-Vanlig HTML, CSS og JavaScript med separate skjermer og hashbasert navigasjon. Ingen eksterne biblioteker, eksterne skrifter, server eller database kreves. SVG-illustrasjoner, ikoner og lyden er inkludert eller genereres lokalt. Lyd er av som standard. Redusert bevegelse følger enhetens innstillinger.
+Vanlig HTML, CSS og JavaScript med separate skjermer og hashbasert navigasjon. Ingen eksterne biblioteker, skrifter, server eller database kreves. Lyden er av som standard. Redusert bevegelse følger enhetens innstillinger.
 
-Kontrollert med Playwright/Chromium: en full spillrunde med alle spor og spørsmål, konfrontasjon, beviskoblinger, feil og riktig anklage, poeng, notater, nullstilling, videreføring av gamle spill, blokkert lokal lagring, redusert bevegelse og offline-bruk. Skjermbredder fra 320 til 1366 piksler er kontrollert. Native appinstallasjon på fysisk iPhone og Android er ikke testet.
+Playwright/Chromium-kontroll sjekker at meny og primærknapper er synlige **før** automatisk skrolling ved 320×568, 390×844 og 1366×900. En full spillrunde er kontrollert med alle spor, svar, konfrontasjon, beviskoblinger og løsning. I tillegg er gammel fremdrift, innholdsrevisjon, alternativ historie med andre mistenkte og en annen løsning, samt offline-bruk kontrollert. Native appinstallasjon på fysiske telefoner er ikke testet.
